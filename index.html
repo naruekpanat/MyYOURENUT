@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Surprise</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #ffebf0;
+            color: #d63384;
+            padding: 50px;
+        }
+        .container {
+            max-width: 300px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #d63384;
+        }
+        button {
+            background: #d63384;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #bf2670;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>ลองเดาว่ารหัสอะไร ใบ้ว่า 6 หลักค่ะเตง🤭 💖</h2>
+        <input type="password" id="password" placeholder="ใส่รหัสค่ะที่รัก">
+        <button onclick="checkPassword()">เข้าสู่เซอร์ไพรส์</button>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var pass = document.getElementById("password").value;
+            if (pass === "021167") {
+                window.location.href = "surprise.html";
+            } else {
+                alert("รหัสผิดน้า ลองใหม่อีกที 💕");
+            }
+        }
+    </script>
+</body>
+</html>

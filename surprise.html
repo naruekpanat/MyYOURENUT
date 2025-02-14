@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เซอร์ไพรส์สำหรับที่รัก</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            min-height: 700px; /* เพิ่มความยาวของหน้าเว็บ */
+        }
+        img {
+            width: 80%;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        .heart-btn {
+            font-size: 40px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+        .heart-btn:hover {
+            transform: scale(1.2);
+        }
+        .hidden {
+            display: none;
+        }
+        .heart {
+            font-size: 40px;
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        iframe {
+            width: 80%; /* ปรับขนาด iframe ให้เท่ากับรูป */
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        /* ปรับขนาด iframe ของคลิปให้มีขนาดเท่ารูป */
+        #videoContainer iframe {
+            height: auto; /* ปรับความสูงอัตโนมัติเพื่อให้พอดีกับขนาด */
+        }
+        /* ปรับขนาด iframe ของเพลงให้เป็นอัตราส่วน 16:9 */
+        #audioContainer iframe {
+            height: calc(100% * 9 / 16); /* ปรับเป็นอัตราส่วน 16:9 */
+            max-height: 300px; /* กำหนดขนาดสูงสุดของเพลง */
+        }
+    </style>
+</head>
+<body>
+    <h1>รักนะคะ💖</h1>
+    <p>พูดทุกวันไม่รู้ว่าเบื่อรึยัง แต่จะพูด แล้วจะทำไม5555555😘</p>
+	<p>เรา 2 คน รูปก็ไม่ค่อยจะมี เวลาอยู่ด้วยกันไม่ค่อยได้ถ่าย มักจะทำอย่างอื่น🤭</p>
+	<p>เราไม่ค่อยได้อยู่ด้วยกัน เค้าเลยทำเว็บเล็กๆ มาให้เธอ เหมือนเป็นของขวัญเล็กๆน้อยๆ🫶🏻</p>
+    <p>ถ้าเจอ❤️ให้กดด้วยนะคะที่รัก</p>
+    <div class="container">
+        <p class="heart">💓💓💓</p>
+
+        <h2>📸 นั่งสุมหัวนินทาลุง</h2>
+        <img src="https://lh3.googleusercontent.com/d/183mrdg6MZAYK40RafyNECEdg51_BJtPb=w1000" alt="รูปของเรา">
+
+        <h2>🎬 ดูหนังด้วยกันครั้งแรก 🥰</h2>
+        <button class="heart-btn" onclick="showVideo()">❤️</button>
+        <div id="videoContainer" class="hidden">
+            <iframe src="https://drive.google.com/file/d/1_ime5Jn0CVfkiOWaAJuGZ5piL2p4DXZ3/preview" allow="autoplay"></iframe>
+        </div>
+
+        <h2>🎵 เค้าชอบเพลงของscrubbมาก
+และมันจะดีมาก ถ้าเธอได้ฟังเพลงนี้กับเค้าด้วย🥹💕</h2>
+        <button class="heart-btn" onclick="showAudio()">❤️</button>
+        <div id="audioContainer" class="hidden">
+            <iframe src="https://drive.google.com/file/d/1Ou1s5gKKcvEDzc-ohRJJ3Re8KdB5Cewm/preview" height="80px"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function showVideo() {
+            document.getElementById("videoContainer").classList.toggle("hidden");
+        }
+        function showAudio() {
+            document.getElementById("audioContainer").classList.toggle("hidden");
+        }
+    </script>
+</body>
+</html>
